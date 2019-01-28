@@ -1,6 +1,6 @@
 const menus = {
   main: `
-    phaser [command] <options>
+    phaser-generator [command] <options>
 
     new ................ create new boirplate
     version ............ show package version
@@ -8,7 +8,7 @@ const menus = {
 
   new: `
     
-    phaser new ......... generate project
+    phaser-generator new ......... generate project
   
   `,
 }
