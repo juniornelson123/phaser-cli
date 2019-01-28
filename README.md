@@ -1,6 +1,6 @@
 # Phaser Generator
 
-  phaser-generator CLI is a template generator for the phaser js game framework, using Typescript (or ES6 soon).
+  phaser-generator is a template generator for the phaser js game framework, using Typescript (or ES6 soon).
 
 
 ## Instalation
