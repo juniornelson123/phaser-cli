@@ -10,19 +10,20 @@ module.exports = async () => {
     {
       type: 'text',
       name: 'name',
-      message: 'Name for your project',
+      message: 'Name for your project: ',
     },
     {
       type: 'checkbox',
       name: 'specification',
-      message: 'Select a specification for your project',
-      choices: ["typescript", "javascript"],
-      default: ['javascript']
+      message: 'Select a specification for your project: ',
+      choices: ["typescript"],
+      // choices: ["typescript", "javascript"],
+      default: ['typescript']
     }
   ];
   
   const responses = await inquirer.prompt(questions);
-  let repository = "javascript"
+  let repository = "typescript"
   let commit = ""
   let name = "boirplate"
   
@@ -31,12 +32,13 @@ module.exports = async () => {
   }
 
   if(responses.specification[0] == "javascript") {
-    repository = "boirplate-phaser-js"
+    repository = "boilerplate-phaser-js"
   } else {
-    repository = "boirplate-phaser-ts"
+    repository = "boilerplate-phaser-ts"
     commit = "b0b93b2d728aa37227791af805ae9a03af833061"
   }
 
+  console.log("\n")
   const spinner = ora(`Create Project ${name}`).start();
 
   Git.Clone(`https://github.com/juniornelson123/${repository}.git`, `./${name}`)
@@ -69,9 +71,21 @@ module.exports = async () => {
     // console.log(String(blob));
     spinner.stop();
 
+    console.log(`\n\n`)
+    
+    console.log(`     cd ${name}`)
+    
+    console.log(`\n`)
+    
+    console.log(`     yarn install or npm install`)
+    
+    console.log(`\n\n`)
+
   })
   .catch(function(err) { 
     spinner.stop();
     console.log(err); 
   });
 }
+
+

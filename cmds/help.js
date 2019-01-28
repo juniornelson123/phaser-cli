@@ -8,9 +8,9 @@ const menus = {
 
   new: `
     
-    phaser new <options>
-
-    --name, -n ..... name package`,
+    phaser new ......... generate project
+  
+  `,
 }
 
 module.exports = (args) => {
